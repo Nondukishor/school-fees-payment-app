@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script src="js/highcharts.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chart</title>
+</head>
+<body>
+        <div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+
+
+		<script type="text/javascript">
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+
+
+
+    title:{
+        text:'This is title of Chart'
+    }
+
+
+
+   ,
+   subtitle:{
+    text:'This is subtitle'
+   },
+
+
+
+
+   tooltip : {
+valueSuffix: 'This is tooltip'
+},
+ 
+
+
+legend : {
+layout: 'vertical',
+align: 'right',
+verticalAlign: 'middle',
+borderWidth: 0
+},
+    xAxis: {
+        categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Population (millions)',
+            align: 'high'
+        },
+
+        labels: {
+            overflow: 'justify',
+            align: 'left',
+                x: 13,
+                y: -3,
+               
+        }
+    },
+    series: [{
+        name: 'Year 1800',
+        data: [107, 31, 635, 203, 2]
+    }, {
+        name: 'Year 1900',
+        data: [133, 156, 947, 408, 6]
+    }, {
+        name: 'Year 2000',
+        data: [814, 841, 3714, 727, 31]
+    }, {
+        name: 'Year 2016',
+        data: [1216, 1001, 4436, 738, 40]
+    }]
+});
+		</script>
+	</body>
+</html>
